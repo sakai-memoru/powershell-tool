@@ -1,0 +1,17 @@
+{
+  "name": "powershell-tools",
+  "version": "1.0.0",
+  "description": "Initialize-Project.ps1\r ======\r ## Overview\r Powershell scripts to create a Node.js package's folder with sample template.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "co": "^4.6.0",
+    "lodash": "^4.17.2",
+    "seneca": "^3.2.2"
+  }
+}

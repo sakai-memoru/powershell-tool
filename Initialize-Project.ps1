@@ -12,9 +12,6 @@ param (
   [string]$module_name = 'module_samples'
 )
 
-# set encoding
-[Console]::OutputEncoding = [Text.UTF8Encoding]::UTF8
-
 # set module name
 mkdir $module_name
 cd $module_name
@@ -29,7 +26,10 @@ mkdir lib
 mkdir test
 
 # create index.js
-$index_js = "module.exports = require('./lib');"
+$index_js = @"
+var Modles = require('./lib');
+module.exports = Modules;
+"@
 $index_js | out-file index.js -encoding utf8
 
 # create README.md template
@@ -84,9 +84,3 @@ MIT.
 
 "@
 $readme_strings | out-file README.md -encoding utf8
-
-# npm init
-npm init
-
-# kick atom editor
-atom $PWD
